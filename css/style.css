@@ -5,19 +5,270 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Courier New', Courier, monospace;
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+.header{
+  background-color: rgb(29, 75, 4);
+  color: rgb(29, 75, 4);
+  height: 80px;
+  display: flex;
 }
 
-p {
-  margin: 0;
+.header h1 {
+  margin:0;
+  padding:0 10px 0 0;
+  width: 20%;
+  height: 50px;
+  background-color:olive;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header nav{
+  width: 80%; 
+  display:flex;
+  justify-content: flex-end;
+}
+
+nav li{
+  display: inline-flex;
+  margin: 10px ;
+}
+
+nav a{
+  font-size: 25px;
+  font-weight: bold;
+  color: olive;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.hero-banner{
+  background-image: 
+    linear-gradient(rgba(16, 102, 29, 0.609), rgba(141, 162, 38, 0.558)),
+    url("../images/02-hero-bg.jpg");  
+  background-size: 210vh;
+  height: 250px; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero-banner h2{
+  margin: 0 0 10px 0;
+  padding: 10px;
+  height: 50px;
+  background-color:olive;
+  color: rgb(29, 75, 4);
+}
+
+
+.page-section{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+  "about about-content"
+  "projects project-content" 
+  "contact contact-info";
+  margin: 20px 50px;
+  grid-gap: 10px;  
+}
+
+#about h2{
+  grid-area: about;
+  margin: 0 100px 0 0;
+  font-size: xxx-large;
+  border-inline-end: 10px solid olive;
+  text-align:right;
+  color:olive;
+  padding: 15px;
+  }
+
+#about.page-section{
+  grid-area: about-content;
+  font-size: 20px;
+ }
+
+#project h2{
+  grid-area: projects;
+  margin: 0 100px 0 0;
+  font-size: xxx-large;
+  border-inline-end: 10px solid olive;  
+  text-align:right;
+  color:olive;
+  padding: 15px;
+}
+
+#projects{
+  grid-area: project-content;  
+}
+
+#contact h2{
+  grid-area: contact;
+  margin: 0 100px 0 0;
+  font-size: xxx-large;
+  border-inline-end: 10px solid olive;
+  text-align: right;
+  color:olive;
+  padding: 15px;
+}
+
+.contact-info{
+  grid-area: contact-info;
+}
+
+
+#projects{
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40% 30% 30%;
+  grid-template-areas: 
+  "project-1 project-1"
+  "project-2 project-3"
+  "project-4 project-5";
+  height: 1000px;
+  grid-gap: 30px;
+  
+}
+
+.project-1{
+  grid-area: project-1;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.72)),
+    url("../images/02-portfolio-1.jpg");
+  background-size:cover;
+  border: solid olive 8px;
+  display:flex;
+  align-items: flex-end;
+  line-height: 0.5;
+  text-decoration: none;
+  padding: 0 0 8% 0;
+  color: rgb(29, 75, 4) ;
+}
+
+.project-2{
+  grid-area: project-2;
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-size: cover;
+  border: solid olive 8px;
+  display:flex;
+  align-items: flex-end;
+  line-height: 0.5;
+  text-decoration: none;
+  padding: 0 0 8% 0;
+  color: rgb(29, 75, 4) ;
+}
+
+.project-3{
+  grid-area: project-3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-size: cover;
+  border: solid olive 8px;
+  display:flex;
+  align-items: flex-end;
+  line-height: 0.5;
+  text-decoration: none;
+  padding: 0 0 8% 0;
+  color: rgb(29, 75, 4) ;
+}
+
+.project-4{
+  grid-area: project-4;
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-size: cover;
+  border: solid olive 8px;
+  display:flex;
+  align-items: flex-end;
+  line-height: 0.5;
+  text-decoration: none;
+  padding: 0 0 8% 0;
+  color: rgb(29, 75, 4) ;
+}
+
+.project-5{
+  grid-area: project-5;
+  background-image: url("../images/02-run-buddy.jpg");
+  background-size: cover;
+  border: solid olive 5px;
+  display:flex;
+  align-items: flex-end;
+  line-height: 0.5;
+  text-decoration: none;
+  padding: 0 0 8% 0;
+  color: rgb(29, 75, 4);
+  }
+
+#contact{
+  align-items: center;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-end;
+  text-decoration: underline;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.main-text{
+  padding: 2px 10px 10px 0px;
+  height: 30%;
+  width: 25%;
+  background-color:olive;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .header h1{
+    width: auto;
+  }
+
+  .hero-banner h2{
+    height: auto;
+  }
+
+  .header nav{
+    display:none;
+  }
+
+  .page-section{
+    display: block;
+    margin: 20px;
+    height: auto;
+  }
+
+  #projects{
+    display: block;
+    margin: auto;
+    height: auto;
+  }
+
+  .project-1, .project-2, .project-3, .project-4{
+    border: none;
+    height: 50vh;
+    margin-bottom: 5vh;
+  }
+
+  .project-5{
+    border: none;
+    height: 50vh;
+  }
+
+  .main-text{
+    height: auto;
+    width: auto;
+  }
+
+  #about h2, #project h2, #contact h2{
+    border-inline-end: none;
+    text-decoration: underline;
+    text-align: center;
+    margin:0 auto;
+  }
 }
